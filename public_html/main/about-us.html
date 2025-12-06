@@ -28,38 +28,114 @@
 </head>
 
 <body>
-  
-  <button class="floating-btn">Enquire Now</button>
 
-  <div class="popup-form">
+  <!-- <button class="floating-btn">Enquire Now</button> -->
+	<button class="floating-btn">How may I help you !!!</button>
+
+
+  <div class="popup-form" id="enq">
     <button class="close-btn">&times;</button>
-    <form>
-        <div class="input-group">
-            <ion-icon name="person-outline"></ion-icon>
-            <input type="text" id="name" name="name" placeholder="Name" required>
-        </div>
+    </br>
+    <div class="enquiry-image"><img src="../assets/images/nowara logo white.jpg" alt="Nowara logo" width="150px"></div>
+    </br>
+    <form id="popup-form" name="popup-form">
+      <div class="input-group">
+        <ion-icon name="person-outline"></ion-icon>
+        <input type="text" id="name" name="name" placeholder="Name" required>
+      </div>
 
-        <div class="input-group">
-            <ion-icon name="call-outline"></ion-icon>
-            <input type="text" id="phone" name="phone" placeholder="Phone" required>
-        </div>
+      <div class="input-group">
+        <ion-icon name="call-outline"></ion-icon>
+        <input type="tel" pattern="[0-9]{10}" id="phone" name="phone" placeholder="Phone"
+          title="Enter only 10 digit phone number" required>
+      </div>
 
-        <div class="input-group">
-            <ion-icon name="mail-outline"></ion-icon>
-            <input type="email" id="email" name="email" placeholder="Email" required>
-        </div>
+      <div class="input-group">
+        <ion-icon name="mail-outline"></ion-icon>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+      </div>
 
-        <button type="submit">Submit</button>
+      <button type="submit" value="Submit" id="popup-form-submit">Submit</button>
     </form>
   </div>
-  
-
 
   <!-- 
     - #HEADER
   -->
-
   <header class="header" data-header>
+    <div class="overlay" data-overlay></div>
+    <div class="header-bottom">
+      <div class="contact-header">
+        <a href="tel:7303649505"><i class="fa fa-phone"></i> +91-7303649505</a> | <a
+          href="mailto:info@nowararealty.com"> <i class="fa fa-envelope"></i> info@nowararealty.com</a>
+      </div>
+      <div class="container">
+        <i class=" fa fa-solid fa-bars fa-lg bars-icon" onclick="openNav()"></i>
+
+        <a href="../#top" class="logo "> <img src="../assets/images/nowara_logo-t.png" alt="Nowara logo"> </a>
+
+        <nav class="navbar" data-navbar>
+
+          <div class="navbar-top">
+
+            <a href="../#top" class="logo"> <img src="../assets/images/nowara logo white.jpg" alt="Nowara logo"> </a>
+
+            <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+          </div>
+
+          <div class="navbar-bottom">
+            <ul class="navbar-list">
+
+              <li>
+                <a href="../#top" class="navbar-link" data-nav-link>Home</a>
+              </li>
+
+              <li>
+                <a href="../#top" class="navbar-link" data-nav-link>Projects</a>
+              </li>
+
+              <li>
+                <a href="../#map" class="navbar-link" data-nav-link>Connect with us</a>
+              </li>
+
+            </ul>
+          </div>
+
+        </nav>
+
+        <div class="header-bottom-actions">
+
+          <button class="header-bottom-actions-btn" data-nav-open-btn aria-label="Open Menu">
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <div>
+        <div><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> </br></br></div>
+        <div>
+          <div class="sidebar-div"><a href="../main/about-us.html">About us</a></div>
+          <div class="sidebar-div"><a href="#">Projects</a></div>
+          <div class="sidebar-div"><a href="../main/careers.html">Career</a></div>
+          <div class="sidebar-div"><a href="#">News and Media</a></div>
+          <div class="sidebar-div"><a href="#">Blogs</a></div>
+          <div class="sidebar-div"><a href="../#map">Connect with us</a></div>
+        </div>
+        <div>
+          <img class="sidebar-logo" src="../assets/images/nowara logo white.jpg" alt="Nowara logo">
+        </div>
+      </div>
+
+    </div>
+
+  </header>
+  <!-- <header class="header" data-header>
     <div class="header-top contact-header">
       <i class="fa fa-phone"></i> +91-7303649505 | <i class="fa fa-envelope"></i> info@nowararealty.com
     </div>
@@ -97,9 +173,7 @@
                 <a href="" class="navbar-link" data-nav-link>About Us</a>
               </li>
 
-              <!-- <li>
-                <a href="../#service" class="navbar-link" data-nav-link>Floor Plans</a>
-              </li> -->
+              
               <li>
                 <a href="./careers.html" class="navbar-link" data-nav-link>Careers</a>
               </li>
@@ -127,52 +201,51 @@
       </div>
     </div>
 
-  </header>
-
-
-
-
+  </header> -->
 
   <main>
     <article>
 
-        <section class="hero-video">
-            <video autoplay muted loop playsinline class="background-video">
-              <source src="../assets/images/about-us/background1.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-        </section>
+      <section class="hero-video">
+        <video autoplay muted loop playsinline class="background-video">
+          <source src="../assets/images/about-us/background1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </section>
 
-          
       <!-- 
         - #ABOUT
       -->
 
       <section class="about" id="about">
-        
+
         <p class="section-subtitle">Our Team</p>
-        
+
         <div class="container">
 
           <figure class="about-banner">
-            <img src="../assets/images/about-us/Piyush Jain.jpeg" >
+            <img src="../assets/images/about-us/Piyush Jain.jpeg">
           </figure>
 
           <div class="about-content">
-
-            
             <br>
             <h2 class="h4 section-title">Piyush Jain,</h2>
             <h2 class="h4 designation">( Managing Partner )</h2>
 
             <p class="about-text">
-               Co-Founder of Nowara Realty, driven by a vision to transform Farukhnagar into a world-class city. Born in Farukhnagar and raised in Gurgaon, I was inspired by my father’s success as a real estate developer. This upbringing instilled in me a passion for the industry and a desire to give back to my roots.
-              <br>As a chartered accountant, I gained extensive experience working with some of the top builders in the country. This expertise equipped me with the skills and insights necessary to embark on this new venture. At Nowara Realty, I am committed to delivering innovative commercial and residential projects that are both affordable and aspirational, aiming to enhance the quality of life for our community.
+              Co-Founder of Nowara Realty, driven by a vision to transform Farukhnagar into a world-class city. Born in
+              Farukhnagar and raised in Gurgaon, I was inspired by my father’s success as a real estate developer. This
+              upbringing instilled in me a passion for the industry and a desire to give back to my roots.
+              <br>As a chartered accountant, I gained extensive experience working with some of the top builders in the
+              country. This expertise equipped me with the skills and insights necessary to embark on this new venture.
+              At Nowara Realty, I am committed to delivering innovative commercial and residential projects that are
+              both affordable and aspirational, aiming to enhance the quality of life for our community.
 
             </p>
 
             <p class="callout">
-              "I believe in the power of real estate to create lasting positive change, and I am dedicated to making a meaningful impact in Farukhnagar."
+              "I believe in the power of real estate to create lasting positive change, and I am dedicated to making a
+              meaningful impact in Farukhnagar."
             </p>
 
           </div>
@@ -189,18 +262,24 @@
             <h2 class="h4 designation">( CEO )</h2>
 
             <p class="about-text">
-               Co-Founder of Nowara Realty, and I have deep roots in Farukh Nagar, where I was born and raised. Throughout my life, I have earned the respect of my community through my integrity and unwavering commitment to my work.
+              Co-Founder of Nowara Realty, and I have deep roots in Farukh Nagar, where I was born and raised.
+              Throughout my life, I have earned the respect of my community through my integrity and unwavering
+              commitment to my work.
               <br>
-              As I reflect on the potential of Farukh Nagar, I believe it’s time for our city to reach new global heights. My vision for Nowara Realty goes beyond profit; it is about making a lasting impact. Together with my dedicated team, I aspire to reshape the map and image of Farukh Nagar, creating spaces that enhance the lives of our residents and reflect our community's spirit.
+              As I reflect on the potential of Farukh Nagar, I believe it’s time for our city to reach new global
+              heights. My vision for Nowara Realty goes beyond profit; it is about making a lasting impact. Together
+              with my dedicated team, I aspire to reshape the map and image of Farukh Nagar, creating spaces that
+              enhance the lives of our residents and reflect our community's spirit.
             </p>
 
             <p class="callout">
-              "At Nowara Realty, we are driven by a passion for transformation and a commitment to excellence. Join us as we embark on this journey to elevate Farukh Nagar and make a difference."
+              "At Nowara Realty, we are driven by a passion for transformation and a commitment to excellence. Join us
+              as we embark on this journey to elevate Farukh Nagar and make a difference."
             </p>
 
           </div>
           <figure class="about-banner">
-            <img src="../assets/images/about-us/Manoj jain.jpeg" >
+            <img src="../assets/images/about-us/Manoj jain.jpeg">
 
           </figure>
 
@@ -209,10 +288,6 @@
 
     </article>
   </main>
-
-
-
-
 
   <!-- 
     - #FOOTER
@@ -232,8 +307,6 @@
           <p class="section-text">
             We Create Your World
           </p>
-
-          
 
         </div>
 
@@ -263,8 +336,6 @@
 
           </ul>
 
-        
-
           <ul class="footer-list">
 
             <li>
@@ -276,7 +347,7 @@
               <li>
                 <a href="#" class="contact-link">
                   <ion-icon name="location-outline"></ion-icon>
-  
+
                   <address>1615 Tower 1 ,<br>DLF Corporate Greens Sector 74 ,<br>Gurugram , Haryana</address>
                 </a>
               </li>
@@ -285,19 +356,19 @@
               <li>
                 <a href="tel:01245181321" class="contact-link">
                   <ion-icon name="call-outline"></ion-icon>
-  
+
                   <span>01245181321</span>
                 </a>
               </li>
-  
+
               <li>
                 <a href="mailto:info@nowararealty.com" class="contact-link">
                   <ion-icon name="mail-outline"></ion-icon>
-  
+
                   <span>info@nowararealty.com</span>
                 </a>
               </li>
-  
+
             </ul>
 
           </ul>
@@ -321,31 +392,33 @@
                   <ion-icon name="logo-instagram"></ion-icon>
                 </a>
               </li>
-  
+
               <li>
                 <a href="https://wa.me/+919505001001" class="social-link" target="_blank">
                   <ion-icon name="logo-whatsapp"></ion-icon>
                 </a>
               </li>
-  
+
             </ul>
 
           </ul>
 
-          
+
         </div>
 
       </div>
-      
+
       <div class="footer-last-info">
-        
+
         <br>
         <p class="copyright">
-          " Need more info? Reach out to our support team at <a href="mailto:info@nowararealty.com">info@nowararealty.com</a> or call us at <a href="tel:+01245181321">01245181321</a> ."
+          " Need more info? Reach out to our support team at <a
+            href="mailto:info@nowararealty.com">info@nowararealty.com</a> or call us at <a
+            href="tel:+01245181321">01245181321</a> ."
         </p>
-        
+
       </div>
-      
+
     </div>
 
     <div class="footer-bottom">
@@ -369,13 +442,8 @@
   </a>
 
 
-  <a
-  href="https://wa.me/+919505001001"
-  class="whatsapp_float"
-  target="_blank"
-  rel="noopener noreferrer"
-  >
-  <i class="fa fa-whatsapp whatsapp-icon"></i>
+  <a href="https://wa.me/+919505001001" class="whatsapp_float" target="_blank" rel="noopener noreferrer">
+    <i class="fa fa-whatsapp whatsapp-icon"></i>
   </a>
 
 

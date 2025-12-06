@@ -1,166 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Nowara - We Create Your World</title>
 
-		<!-- 
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Nowara - We Create Your World</title>
+
+	<!-- 
     - favicon
   -->
-		<link
-			rel="shortcut icon"
-			href="../assets/images/favicon.jpg"
-			type="image/svg+xml"
-		/>
+	<link rel="shortcut icon" href="../assets/images/favicon.jpg" type="image/svg+xml" />
 
-		<!-- 
+	<!-- 
     - custom css link
   -->
-		<link rel="stylesheet" href="../assets/css/style.css" />
-		<link rel="stylesheet" href="../assets/css/careers-style.css" />
-		<link
-			rel="stylesheet"
-			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
-		/>
-		<!-- 
+	<link rel="stylesheet" href="../assets/css/style.css" />
+	<link rel="stylesheet" href="../assets/css/careers-style.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+	<!-- 
     - google font link
   -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+		rel="stylesheet" />
+</head>
 
-	<body>
-		<button class="floating-btn">Enquire Now</button>
+<body>
+	<button class="floating-btn">How may I help you !!!</button>
 
-		<div class="popup-form">
-			<button class="close-btn">&times;</button>
-			<form>
-				<div class="input-group">
-					<ion-icon name="person-outline"></ion-icon>
-					<input
-						type="text"
-						id="name"
-						name="name"
-						placeholder="Name"
-						required
-					/>
-				</div>
-
-				<div class="input-group">
-					<ion-icon name="call-outline"></ion-icon>
-					<input
-						type="text"
-						id="phone"
-						name="phone"
-						placeholder="Phone"
-						required
-					/>
-				</div>
-
-				<div class="input-group">
-					<ion-icon name="mail-outline"></ion-icon>
-					<input
-						type="email"
-						id="email"
-						name="email"
-						placeholder="Email"
-						required
-					/>
-				</div>
-
-				<button type="submit">Submit</button>
-			</form>
+	<div class="popup-form" id="enq">
+		<button class="close-btn">&times;</button>
+		</br>
+		<div class="enquiry-image"><img src="../assets/images/nowara logo white.jpg" alt="Nowara logo" width="150px">
 		</div>
+		</br>
+		<form id="popup-form" name="popup-form">
+			<div class="input-group">
+				<ion-icon name="person-outline"></ion-icon>
+				<input type="text" id="name" name="name" placeholder="Name" required>
+			</div>
 
-		<!-- 
+			<div class="input-group">
+				<ion-icon name="call-outline"></ion-icon>
+				<input type="tel" pattern="[0-9]{10}" id="phone" name="phone" placeholder="Phone"
+					title="Enter only 10 digit phone number" required>
+			</div>
+
+			<div class="input-group">
+				<ion-icon name="mail-outline"></ion-icon>
+				<input type="email" id="email" name="email" placeholder="Email" required>
+			</div>
+
+			<button type="submit" value="Submit" id="popup-form-submit">Submit</button>
+		</form>
+	</div>
+
+	<!-- 
     - #HEADER
   -->
 
-		<header class="header" data-header>
-			<div class="header-top contact-header">
-				<i class="fa fa-phone"></i> +91-7303649505 | <i class="fa fa-envelope"></i> info@nowararealty.com
+	<header class="header" data-header>
+		<div class="overlay" data-overlay></div>
+		<div class="header-bottom">
+			<div class="contact-header">
+				<a href="tel:7303649505"><i class="fa fa-phone"></i> +91-7303649505</a> | <a
+					href="mailto:info@nowararealty.com"> <i class="fa fa-envelope"></i> info@nowararealty.com</a>
 			</div>
-			<div class="overlay" data-overlay></div>
+			<div class="container">
+				<i class=" fa fa-solid fa-bars fa-lg bars-icon" onclick="openNav()"></i>
 
-			<div class="header-bottom">
-				<div class="container">
-					<a href="../" class="logo">
-						<img src="../assets/images/nowara logo.jpg" alt="Nowara logo" />
-					</a>
+				<a href="../#top" class="logo "> <img src="../assets/images/nowara_logo-t.png" alt="Nowara logo"> </a>
 
-					<nav class="navbar" data-navbar>
-						<div class="navbar-top">
-							<a href="../" class="logo">
-								<img
-									src="../assets/images/nowara logo white.jpg"
-									alt="Nowara logo"
-								/>
-							</a>
+				<nav class="navbar" data-navbar>
 
-							<button
-								class="nav-close-btn"
-								data-nav-close-btn
-								aria-label="Close Menu"
-							>
-								<ion-icon name="close-outline"></ion-icon>
-							</button>
-						</div>
+					<div class="navbar-top">
 
-						<div class="navbar-bottom">
-							<ul class="navbar-list">
-								<li>
-									<a href="../" class="navbar-link" data-nav-link>Home</a>
-								</li>
+						<a href="../#top" class="logo"> <img src="../assets/images/nowara logo white.jpg"
+								alt="Nowara logo"> </a>
 
-								<li>
-									<a href="./about-us.html" class="navbar-link" data-nav-link
-										>About Us</a
-									>
-								</li>
-
-								<!-- <li>
-									<a href="../#service" class="navbar-link" data-nav-link
-										>Floor Plans</a
-									>
-								</li> -->
-								<li>
-									<a href="" class="navbar-link" data-nav-link>Careers</a>
-								</li>
-
-								<li>
-									<a href="./faq.html" class="navbar-link" data-nav-link>FAQ</a>
-								</li>
-
-								<li>
-									<a href="../#contactus" class="navbar-link" data-nav-link
-										>Contact Us</a
-									>
-								</li>
-							</ul>
-						</div>
-					</nav>
-
-					<div class="header-bottom-actions">
-						<button
-							class="header-bottom-actions-btn"
-							data-nav-open-btn
-							aria-label="Open Menu"
-						>
-							<ion-icon name="menu-outline"></ion-icon>
+						<button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+							<ion-icon name="close-outline"></ion-icon>
 						</button>
+
 					</div>
+
+					<div class="navbar-bottom">
+						<ul class="navbar-list">
+
+							<li>
+								<a href="../#top" class="navbar-link" data-nav-link>Home</a>
+							</li>
+
+							<li>
+								<a href="../#top" class="navbar-link" data-nav-link>Projects</a>
+							</li>
+
+							<li>
+								<a href="../#map" class="navbar-link" data-nav-link>Connect with us</a>
+							</li>
+
+						</ul>
+					</div>
+
+				</nav>
+
+				<div class="header-bottom-actions">
+
+					<button class="header-bottom-actions-btn" data-nav-open-btn aria-label="Open Menu">
+						<ion-icon name="menu-outline"></ion-icon>
+					</button>
+
 				</div>
 			</div>
-		</header>
+		</div>
 
-		<main>
-			<section class="section">
+		<div id="mySidenav" class="sidenav">
+			<div>
+				<div><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> </br></br></div>
+				<div>
+					<div class="sidebar-div"><a href="../main/about-us.html">About us</a></div>
+					<div class="sidebar-div"><a href="#">Projects</a></div>
+					<div class="sidebar-div"><a href="../main/careers.html">Career</a></div>
+					<div class="sidebar-div"><a href="#">News and Media</a></div>
+					<div class="sidebar-div"><a href="#">Blogs</a></div>
+					<div class="sidebar-div"><a href="../#map">Connect with us</a></div>
+				</div>
+				<div>
+					<img class="sidebar-logo" src="../assets/images/nowara logo white.jpg" alt="Nowara logo">
+				</div>
+			</div>
+
+		</div>
+
+	</header>
+
+	<main>
+		<article>
+			<section class="section-careers">
 				<div class="container">
 					<div class="careers-container careers-form">
 						<h1>Join Our Team</h1>
@@ -206,14 +185,7 @@
 										📄 Drag & Drop your CV here <br />
 										or <span>click to browse</span>
 									</p>
-									<input
-										type="file"
-										id="cv"
-										name="cv"
-										accept=".pdf,.doc,.docx"
-										required
-										hidden
-									/>
+									<input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required hidden />
 								</div>
 								<small id="fileName"></small>
 							</div>
@@ -229,173 +201,155 @@
 					</div>
 				</div>
 			</section>
-		</main>
 
-		<!-- 
+		</article>
+	</main>
+
+	<!-- 
     - #FOOTER
   -->
 
-		<footer class="footer">
-			<div class="footer-top">
-				<div class="container">
-					<div class="footer-brand">
-						<a href="#" class="logo">
-							<img src="../assets/images/nowara_logo-t.png" alt="Nowara logo" />
-						</a>
+	<footer class="footer">
+		<div class="footer-top">
+			<div class="container">
+				<div class="footer-brand">
+					<a href="#" class="logo">
+						<img src="../assets/images/nowara_logo-t.png" alt="Nowara logo" />
+					</a>
 
-						<p class="section-text">We Create Your World</p>
-					</div>
-
-					<div class="footer-link-box">
-						<ul class="footer-list">
-							<li>
-								<p class="footer-list-title">Company</p>
-							</li>
-
-							<li>
-								<a href="./about-us.html" class="footer-link">About Us</a>
-							</li>
-
-							<li>
-								<a href="../#map" class="footer-link">Location Map</a>
-							</li>
-
-							<li>
-								<a href="" class="footer-link">FAQ</a>
-							</li>
-
-							<li>
-								<a href="../#contactus" class="footer-link">Contact Us</a>
-							</li>
-						</ul>
-
-						<ul class="footer-list">
-							<li>
-								<p class="footer-list-title">Contact Us</p>
-							</li>
-
-							<ul class="contact-list">
-								<li>
-									<a href="#" class="contact-link">
-										<ion-icon name="location-outline"></ion-icon>
-
-										<address>
-											1615 Tower 1 ,<br />DLF Corporate Greens Sector 74 ,<br />Gurugram
-											, Haryana
-										</address>
-									</a>
-								</li>
-
-								<li>
-									<a href="tel:01245181321" class="contact-link">
-										<ion-icon name="call-outline"></ion-icon>
-
-										<span>01245181321</span>
-									</a>
-								</li>
-
-								<li>
-									<a href="mailto:info@nowararealty.com" class="contact-link">
-										<ion-icon name="mail-outline"></ion-icon>
-
-										<span>info@nowararealty.com</span>
-									</a>
-								</li>
-							</ul>
-						</ul>
-
-						<ul class="footer-list">
-							<li>
-								<p class="footer-list-title">Follow Us</p>
-							</li>
-
-							<ul class="social-list">
-								<li>
-									<a
-										href="https://www.linkedin.com/company/nowararealty/"
-										class="social-link" target="_blank"
-									>
-										<ion-icon name="logo-linkedin"></ion-icon>
-									</a>
-								</li>
-
-								<li>
-									<a
-										href="https://www.instagram.com/nowararealty/"
-										class="social-link" target="_blank"
-									>
-										<ion-icon name="logo-instagram"></ion-icon>
-									</a>
-								</li>
-
-								<li>
-									<a href="https://wa.me/+919505001001" class="social-link" target="_blank">
-										<ion-icon name="logo-whatsapp"></ion-icon>
-									</a>
-								</li>
-							</ul>
-						</ul>
-					</div>
+					<p class="section-text">We Create Your World</p>
 				</div>
 
-				<div class="footer-last-info">
-					<br />
-					<p class="copyright">
-						" Need more info? Reach out to our support team at
-						<a href="mailto:info@nowararealty.com">info@nowararealty.com</a> or
-						call us at <a href="tel:+01245181321">01245181321</a> ."
-					</p>
+				<div class="footer-link-box">
+					<ul class="footer-list">
+						<li>
+							<p class="footer-list-title">Company</p>
+						</li>
+
+						<li>
+							<a href="./about-us.html" class="footer-link">About Us</a>
+						</li>
+
+						<li>
+							<a href="../#map" class="footer-link">Location Map</a>
+						</li>
+
+						<li>
+							<a href="" class="footer-link">FAQ</a>
+						</li>
+
+						<li>
+							<a href="../#contactus" class="footer-link">Contact Us</a>
+						</li>
+					</ul>
+
+					<ul class="footer-list">
+						<li>
+							<p class="footer-list-title">Contact Us</p>
+						</li>
+
+						<ul class="contact-list">
+							<li>
+								<a href="#" class="contact-link">
+									<ion-icon name="location-outline"></ion-icon>
+
+									<address>
+										1615 Tower 1 ,<br />DLF Corporate Greens Sector 74 ,<br />Gurugram
+										, Haryana
+									</address>
+								</a>
+							</li>
+
+							<li>
+								<a href="tel:01245181321" class="contact-link">
+									<ion-icon name="call-outline"></ion-icon>
+
+									<span>01245181321</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="mailto:info@nowararealty.com" class="contact-link">
+									<ion-icon name="mail-outline"></ion-icon>
+
+									<span>info@nowararealty.com</span>
+								</a>
+							</li>
+						</ul>
+					</ul>
+
+					<ul class="footer-list">
+						<li>
+							<p class="footer-list-title">Follow Us</p>
+						</li>
+
+						<ul class="social-list">
+							<li>
+								<a href="https://www.linkedin.com/company/nowararealty/" class="social-link"
+									target="_blank">
+									<ion-icon name="logo-linkedin"></ion-icon>
+								</a>
+							</li>
+
+							<li>
+								<a href="https://www.instagram.com/nowararealty/" class="social-link" target="_blank">
+									<ion-icon name="logo-instagram"></ion-icon>
+								</a>
+							</li>
+
+							<li>
+								<a href="https://wa.me/+919505001001" class="social-link" target="_blank">
+									<ion-icon name="logo-whatsapp"></ion-icon>
+								</a>
+							</li>
+						</ul>
+					</ul>
 				</div>
 			</div>
 
-			<div class="footer-bottom">
-				<div class="container">
-					<p class="copyright">
-						&copy; 2025 <a href="#">Nowara</a>. All Rights Reserved
-					</p>
-				</div>
+			<div class="footer-last-info">
+				<br />
+				<p class="copyright">
+					" Need more info? Reach out to our support team at
+					<a href="mailto:info@nowararealty.com">info@nowararealty.com</a> or
+					call us at <a href="tel:+01245181321">01245181321</a> ."
+				</p>
 			</div>
-		</footer>
+		</div>
 
-		<!-- 
+		<div class="footer-bottom">
+			<div class="container">
+				<p class="copyright">
+					&copy; 2025 <a href="#">Nowara</a>. All Rights Reserved
+				</p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- 
     - #BACK TO TOP
   -->
 
-		<a
-			href="#top"
-			class="back-top-btn"
-			aria-label="back to top"
-			data-back-top-btn
-		>
-			<ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
-		</a>
+	<a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+		<ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+	</a>
 
-		<a
-			href="https://wa.me/+919505001001"
-			class="whatsapp_float"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
-			<i class="fa fa-whatsapp whatsapp-icon"></i>
-		</a>
+	<a href="https://wa.me/+919505001001" class="whatsapp_float" target="_blank" rel="noopener noreferrer">
+		<i class="fa fa-whatsapp whatsapp-icon"></i>
+	</a>
 
-		<!-- 
+	<!-- 
     - custom js link
   -->
 
-		<script src="../assets/js/script.js"></script>
-		<script src="../assets/js/careers.js"></script>
+	<script src="../assets/js/script.js"></script>
+	<script src="../assets/js/careers.js"></script>
 
-		<!-- 
+	<!-- 
     - ionicon link
   -->
-		<script
-			type="module"
-			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-		></script>
-		<script
-			nomodule
-			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-		></script>
-	</body>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
 </html>
