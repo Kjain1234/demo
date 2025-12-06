@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nowara - We Create Your World</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/favicon.jpg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Popup Div -->
+  <div id="popupAlert">
+    Your response has been submitted. We will get back to you soon.
+  </div>
+
+
+  <div class="popup-overlay hidden" id="popup">
+    <div class="popup">
+      <div class="disclamer-image"><img src="./assets/images/Nowara Logo White Quotation.jpeg" alt="Nowara logo"
+          width="300px"></div>
+      <!-- </br> -->
+      <h2>Welcome to the Official Site of Nowara Realty</h2>
+      <p>
+        <b><i class="fa fa-info-circle"></i> Disclaimer Note:</b> The photographs/artistic impressions contained herein
+        are illustrative and used for indicative purposes only. This is purely conceptual and not a legal offering. No
+        warranty either expressly or impliedly given that the completed development of the project will comply in any
+        degree with such artistic impression depicted herein. All specifications, amenities etc. of the unit/project
+        shall be as per the final agreement to sell between the parties. Recipients are advised to use their discretion
+        in relying on the information described/shown herein.
+        </br> </br>
+        We strongly recommend you not to rely on information on other websites that may appear similar to this website
+        as they may be misleading and may cause you loss
+        </br> </br>
+        Please contact us at <b>+91-7303649505</b> (India) / <b>info@nowararealty.com</b> for the updated sales and
+        marketing information and collaterals.
+        </br> </br>
+        In order to provide a more relevant experience for you, we use cookies to enable some website functionality. For
+        more information, please review our <b>Cookies Policy</b> and <b>Privacy Policy</b>.
+      </p>
+      <button id="agreeBtn">I Agree</button>
+    </div>
+  </div>
+  <div class="notice-overlay hidden" id="notice-popup">
+    <div class="popup">
+      <!-- <div class="disclamer-image"><img src="./assets/images/nowara logo.jpg" alt="Nowara logo" width="150px"></div> -->
+      </br>
+      <h2>Notice</h2>
+      <p>
+        <b><i class="fa fa-info-circle"></i> Notice:</b> The photographs/artistic impressions contained herein are
+        illustrative and used for indicative purposes only. This is purely conceptual and not a legal offering. No
+        warranty either expressly or impliedly given that the completed development of the project will comply in any
+        degree with such artistic impression depicted herein. All specifications, amenities etc. of the unit/project
+        shall be as per the final agreement to sell between the parties. Recipients are advised to use their discretion
+        in relying on the information described/shown herein.
+      </p>
+      <button id="closeBtn">Close</button>
+    </div>
+  </div>
+
+  <button class="floating-btn">How may I help you !!!</button>
+
+  <div class="popup-form" id="enq">
+    <button class="close-btn">&times;</button>
+    </br>
+    <div class="enquiry-image"><img src="./assets/images/nowara logo white.jpg" alt="Nowara logo" width="150px"></div>
+    </br>
+    <form id="popup-form" name="popup-form">
+      <div class="input-group">
+        <ion-icon name="person-outline"></ion-icon>
+        <input type="text" id="name" name="name" placeholder="Name" required>
+      </div>
+
+      <div class="input-group">
+        <ion-icon name="call-outline"></ion-icon>
+        <input type="tel" pattern="[0-9]{10}" id="phone" name="phone" placeholder="Phone"
+          title="Enter only 10 digit phone number" required>
+      </div>
+
+      <div class="input-group">
+        <ion-icon name="mail-outline"></ion-icon>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+      </div>
+
+      <button type="submit" value="Submit" id="popup-form-submit">Submit</button>
+    </form>
+  </div>
+
+
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <!-- <div class="header-top contact-header">
+      <i class="fa fa-phone"></i> +91-7303649505 | <i class="fa fa-envelope"></i> info@nowararealty.com
+    </div> -->
+
+    <div class="overlay" data-overlay></div>
+
+
+    <div class="header-bottom">
+      <div class="contact-header">
+        <a href="tel:7303649505"><i class="fa fa-phone"></i> +91-7303649505</a> | <a href="mailto:info@nowararealty.com"> <i class="fa fa-envelope"></i> info@nowararealty.com</a>
+      </div>
+      <div class="container">
+        <i class=" fa fa-solid fa-bars fa-lg bars-icon" onclick="openNav()"></i>
+
+        <a href="/" class="logo ">
+          <img src="./assets/images/nowara_logo-t.png" alt="Nowara logo">
+        </a>
+
+        <nav class="navbar" data-navbar>
+
+          <div class="navbar-top">
+
+            <a href="/" class="logo">
+              <img src="./assets/images/nowara logo white.jpg" alt="Nowara logo">
+            </a>
+
+            <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+          </div>
+
+          <div class="navbar-bottom">
+            <ul class="navbar-list">
+
+              <li>
+                <a href="#top" class="navbar-link" data-nav-link>Home</a>
+              </li>
+
+              <li>
+                <a href="#top" class="navbar-link" data-nav-link>Projects</a>
+              </li>
+
+              <li>
+                <a href="#map" class="navbar-link" data-nav-link>Connect with us</a>
+              </li>
+
+            </ul>
+          </div>
+
+        </nav>
+
+        <div class="header-bottom-actions">
+
+          <button class="header-bottom-actions-btn" data-nav-open-btn aria-label="Open Menu">
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+
+        </div>
+
+
+
+      </div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+      <div>
+        <div><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> </br></br></div>
+        <div>
+          <div class="sidebar-div"><a href="#">About</a></div>
+          <div class="sidebar-div"><a href="#">Services</a></div>
+          <div class="sidebar-div"><a href="#">Clients</a></div>
+          <div class="sidebar-div"><a href="#">Contact</a></div>
+        </div>
+        <div>
+          <img class="sidebar-logo" src="./assets/images/nowara logo white.jpg" alt="Nowara logo">
+        </div>
+      </div>
+      
+    </div>
+
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">
+            </p>
+
+            <h2 class="h1 hero-title">We Create Your<br>World</h2>
+
+            <p class="hero-text">
+              Upcoming Affordable Housing Project In Farukhnagar With 2 BHk And 3 BHk Near Reliance MET City Township.
+            </p>
+
+          </div>
+
+        </div>
+      </section>
+      <section class="section urban-development-vision">
+        <div>
+          <img src="./assets/images/Urban development Vision.png" alt="Urban Development Vision">
+        </div>
+      </section>
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <!-- <section class="service" id="service">
+        <div class="container">
+
+          <p class="section-subtitle">Blueprints</p>
+
+          <h2 class="h2 section-title fade-up">Floor Plans</h2>
+
+          <ul class="service-list">
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/floor-plans/3d floor.jpg" alt="Service icon">
+                </div>
+
+                <h3 class="h3 card-title">
+                  <a>2 BHK</a>
+                </h3>
+
+                <a class="card-link">
+                  <span> 2 Bedroom , 2 Bathroom , 551 sqft</span>
+                </a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/floor-plans/3d Plan.jpg" alt="Service icon">
+                </div>
+
+                <h3 class="h3 card-title">
+                  <a>3 BHK</a>
+                </h3>
+
+                <a class="card-link">
+                  <span> 3 Bedroom , 2 Bathroom , 645 sqft</span>
+                </a>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section> -->
+
+
+      <!-- 
+        - #PROPERTY
+      -->
+
+      <!-- <section class="property" id="property">
+        <div class="container">
+
+          <p class="section-subtitle">Housing</p>
+
+          <h2 class="h2 section-title fade-up">Nowara Apartments</h2>
+
+          <ul class="property-list has-scrollbar">
+
+            <li>
+              <div class="property-card">
+
+                <figure class="card-banner">
+
+                  <a href="#">
+                    <img src="./assets/images/appertments/property-1.jpg" alt="New Apartment Nice View" class="w-100">
+                  </a>
+
+                  <div class="banner-actions">
+
+                    <button class="banner-actions-btn">
+                      <ion-icon name="location"></ion-icon>
+
+                      <address>Gurugram</address>
+                    </button>
+
+                  </div>
+
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-price">
+                     <strong> 3 BHK </strong>
+                  </div>
+
+                  <p class="card-text">
+                    Beautiful Nowara Huge 1 Family House In the Heart Of Farrukhnagar.
+                  </p>
+
+                  <ul class="card-list">
+
+                    <li class="card-item">
+                      <strong>3</strong>
+
+                      <ion-icon name="bed-outline"></ion-icon>
+
+                      <span>Bedrooms</span>
+                    </li>
+
+                    <li class="card-item">
+                      <strong>2</strong>
+
+                      <ion-icon name="man-outline"></ion-icon>
+
+                      <span>Bathrooms</span>
+                    </li>
+
+                    <li class="card-item">
+                      <strong>645</strong>
+
+                      <ion-icon name="square-outline"></ion-icon>
+
+                      <span>Square Ft</span>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="property-card">
+
+                <figure class="card-banner">
+
+                  <a href="#">
+                    <img src="./assets/images/appertments/property-2.jpg" alt="Modern Apartments" class="w-100">
+                  </a>
+
+                  <div class="banner-actions">
+
+                    <button class="banner-actions-btn">
+                      <ion-icon name="location"></ion-icon>
+
+                      <address>Gurugram</address>
+                    </button>
+
+                  </div>
+
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-price">
+                    <strong> 2 BHK </strong>
+                  </div>
+
+                  <p class="card-text">
+                    Beautiful Nowara Huge 1 Family House In the Heart Of Farrukhnagar. 
+                  </p>
+
+                  <ul class="card-list">
+
+                    <li class="card-item">
+                      <strong>2</strong>
+
+                      <ion-icon name="bed-outline"></ion-icon>
+
+                      <span>Bedrooms</span>
+                    </li>
+
+                    <li class="card-item">
+                      <strong>2</strong>
+
+                      <ion-icon name="man-outline"></ion-icon>
+
+                      <span>Bathrooms</span>
+                    </li>
+
+                    <li class="card-item">
+                      <strong>551</strong>
+
+                      <ion-icon name="square-outline"></ion-icon>
+
+                      <span>Square Ft</span>
+                    </li>
+
+                  </ul>
+
+                </div>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+      </section> -->
+
+      <!-- <section class="features">
+        <div class="container">
+          <p class="section-subtitle">Luxuries</p>
+          <h2 class="h2 section-title fade-up">Building Amenities</h2>
+          
+          <div class="aminities-carousel">
+            <ul class="aminities-list">
+              <li>
+                <div class="aminities-card">
+                  <figure class="aminities-card-banner">
+                    <img src="./assets/images/building-amenities/amphitheater.jpg" alt="Amphitheater" class="w-100">
+                  </figure>
+                  <div class="aminities-content">
+                    <h3 class="h3 aminities-title"><a href="#">Amphitheater</a></h3>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="aminities-card">
+                  <figure class="aminities-card-banner">
+                    <img src="./assets/images/building-amenities/Badminton Court.webp" alt="Badminton Court" class="w-100">
+                  </figure>
+                  <div class="aminities-content">
+                    <h3 class="h3 aminities-title"><a href="#">Badminton Court</a></h3>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="aminities-card">
+                  <figure class="aminities-card-banner">
+                    <img src="./assets/images/building-amenities/Cricket Pitch.jpg" alt="Cricket Pitch" class="w-100">
+                  </figure>
+                  <div class="aminities-content">
+                    <h3 class="h3 aminities-title"><a href="#">Cricket Pitch</a></h3>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="aminities-card">
+                  <figure class="aminities-card-banner">
+                    <img src="./assets/images/building-amenities/Gymnasium.webp" alt="Gymnasium" class="w-100">
+                  </figure>
+                  <div class="aminities-content">
+                    <h3 class="h3 aminities-title"><a href="#">Gymnasium</a></h3>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="aminities-card">
+                  <figure class="aminities-card-banner">
+                    <img src="./assets/images/building-amenities/Yoga & Meditation.jpg" alt="Yoga & Meditation" class="w-100">
+                  </figure>
+                  <div class="aminities-content">
+                    <h3 class="h3 aminities-title"><a href="#">Yoga & Meditation</a></h3>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="aminities-card">
+                  <figure class="aminities-card-banner">
+                    <img src="./assets/images/building-amenities/Indoor Games.jpg" alt="Indoor Games" class="w-100">
+                  </figure>
+                  <div class="aminities-content">
+                    <h3 class="h3 aminities-title"><a href="#">Indoor Games</a></h3>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- <section class="blog" id="blog">
+        <div class="container">
+
+          <p class="section-subtitle">Virtual Tour</p>
+
+          <h2 class="h2 section-title fade-up">Property Feeds</h2>
+
+          <ul class="blog-list has-scrollbar">
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/property-feeds/A1.jpg" alt="The Most Inspiring Interior Design Of 2021" class="w-100">
+                </figure>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/property-feeds/A3.jpg" alt="Recent Commercial Real Estate Transactions" class="w-100">
+                </figure>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/property-feeds/B3.jpg" alt="Renovating a Living Room? Experts Share Their Secrets"
+                    class="w-100">
+                </figure>
+
+              </div>
+            </li>
+
+            
+
+          </ul>
+
+          <ul class="blog-list has-scrollbar">
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/property-feeds/B1.jpg" alt="The Most Inspiring Interior Design Of 2021" class="w-100">
+                </figure>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/property-feeds/A4.jpg" alt="Recent Commercial Real Estate Transactions" class="w-100">
+                </figure>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/property-feeds/B5.jpg" alt="Renovating a Living Room? Experts Share Their Secrets"
+                    class="w-100">
+                </figure>
+
+              </div>
+            </li>
+            
+          </ul>
+
+        </div>
+      </section> -->
+
+
+      <!-- <section class="blog" id="blog">
+        <div class="container">
+
+          <p class="section-subtitle">Housing</p>
+
+          <h2 class="h2 section-title fade-up">Upcoming Projects</h2>
+
+          <ul class="blog-list has-scrollbar">
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/upcoming-projects/up1.jpg" alt="The Most Inspiring Interior Design Of 2021" class="w-100">
+                </figure>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/upcoming-projects/up2.jpg" alt="Recent Commercial Real Estate Transactions" class="w-100">
+                </figure>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/upcoming-projects/up3.jpg" alt="Renovating a Living Room? Experts Share Their Secrets"
+                    class="w-100">
+                </figure>
+
+              </div>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </section> -->
+
+
+      <section class="section map" aria-label="map" id="map">
+        <p class="section-subtitle">Contact Us</p>
+        <h2 class="h2 section-title">Let's Contact With Us</h2>
+        <div class="container map-container">
+
+          <div class="map-left">
+
+            <h2 class="h2 section-title">Location Advantages</h2>
+            <ul class="location-advantages">
+              <li><strong>2 km</strong> from 8500 acre Reliance MET city</li>
+              <li><strong>7 km</strong> from Sultanpur Bird Sanctuary</li>
+              <li><strong>5 min</strong> from KMP Express-way</li>
+              <li><strong>20 min</strong> from Dwarka Express-way</li>
+            </ul>
+
+          </div>
+
+          <div class="map-right">
+            <div style=" height:450px;">
+              <iframe src="https://www.google.com/maps/d/embed?mid=11-BFtKuVyGeY377jSf7F8SZLavT1l38&ehbc=2E312F"
+                width="900" height="520" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                style="border:none;  margin-top:-70px; ">
+              </iframe>
+            </div>
+            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3507.767885137572!2d76.8178731754944!3d28.456412675761346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDI3JzIzLjEiTiA3NsKwNDknMTMuNiJF!5e0!3m2!1sen!2sin!4v1746002138483!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+          </div>
+
+        </div>
+      </section>
+
+      <!-- <section class="section contact" id="contact" aria-label="contact">
+        <div class="container">
+
+          
+
+          <form id="contact-form" name="contact-form" class="contact-form">
+
+            <div class="input-wrapper">
+              <input type="text" name="name" aria-label="name" placeholder="Your name*" required class="input-field">
+
+              <input type="email" name="email" aria-label="email" placeholder="Email address*" required
+                class="input-field">
+            </div>
+
+            <div class="input-wrapper">
+              <input type="text" name="subject" aria-label="subject" placeholder="Subject" class="input-field">
+
+              <input type="tel" pattern="[0-9]{10}" name="phone" aria-label="phone" placeholder="Phone number" class="input-field" title="Enter only 10 digit phone number" required>
+            </div>
+
+            <textarea name="message" aria-label="message" placeholder="Your message...*" required
+              class="input-field"></textarea>
+
+            <div class="checkbox-wrapper">
+              <input type="checkbox" name="terms_and_policy" id="terms" required checked class="checkbox">
+
+              <label for="terms" class="label">
+                I agree and authorize the promoter company and group, including authorised and appointed third parties to contact me and / or send relevant data over Email, SMS & WhatsApp. This will override the registry with DNC / NDNC.</a>
+              </label>
+            </div>
+
+            <button type="submit" value="Submit" id="submit" class="btn btn-primary">Send Message</button>
+
+          </form>
+
+        </div>
+      </section> -->
+    </article>
+  </main>
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/nowara_logo-t.png" alt="Nowara logo">
+          </a>
+
+          <p class="section-text">
+            We Create Your World
+          </p>
+
+        </div>
+
+        <div class="footer-link-box">
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Company</p>
+            </li>
+
+            <li>
+              <a href="./main/about-us.html" class="footer-link">About Us</a>
+            </li>
+
+            <li>
+              <a href="#map" class="footer-link">Location Map</a>
+            </li>
+
+            <li>
+              <a href="./main/faq.html" class="footer-link">FAQ</a>
+            </li>
+
+            <li>
+              <a href="#map" class="footer-link">Contact Us</a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Contact Us</p>
+            </li>
+
+            <ul class="contact-list">
+
+              <li>
+                <a href="#" class="contact-link">
+                  <ion-icon name="location-outline"></ion-icon>
+
+                  <address>1615 Tower 1 ,<br>DLF Corporate Greens Sector 74 ,<br>Gurugram , Haryana</address>
+                </a>
+              </li>
+
+              <li>
+                <a href="tel:01245181321" class="contact-link">
+                  <ion-icon name="call-outline"></ion-icon>
+
+                  <span>01245181321</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="mailto:info@nowararealty.com" class="contact-link">
+                  <ion-icon name="mail-outline"></ion-icon>
+
+                  <span>info@nowararealty.com</span>
+                </a>
+              </li>
+
+            </ul>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Follow Us</p>
+            </li>
+
+            <ul class="social-list ">
+
+              <li>
+                <a href="https://www.linkedin.com/company/nowararealty/" class="social-link" target="_blank">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.instagram.com/nowararealty/" class="social-link" target="_blank">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://wa.me/+917303649505" class="social-link" target="_blank">
+                  <ion-icon name="logo-whatsapp"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+
+          </ul>
+
+
+        </div>
+
+      </div>
+
+      <div class="footer-last-info">
+        <br>
+        <p class="copyright">
+          " Need more info? Reach out to our support team at <a
+            href="mailto:info@nowararealty.com">info@nowararealty.com</a> or call us at <a
+            href="tel:+01245181321">01245181321</a> ."
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2025 <a href="#">Nowara</a>. All Rights Reserved
+        </p>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <a href="https://wa.me/+917303649505" class="whatsapp_float" target="_blank" rel="noopener noreferrer">
+    <i class="fa fa-whatsapp whatsapp-icon"></i>
+  </a>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/contact-us.js"></script>
+  <script src="./assets/js/enquire.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

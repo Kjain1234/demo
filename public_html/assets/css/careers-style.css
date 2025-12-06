@@ -1,0 +1,102 @@
+.careers-container {
+    max-width: 550px;
+	margin-inline: auto;
+	background: #fff;
+	padding: 25px;
+	border-radius: 12px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+	text-align: center;
+	color: var(--prussian-blue);
+}
+
+p {
+	text-align: center;
+	margin-bottom: 20px;
+	color: var(--raisin-black-1);
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+label {
+	font-weight: bold;
+	display: block;
+	margin-bottom: 6px;
+}
+
+input,
+select {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+}
+
+.careers-btn {
+	width: 100%;
+	padding: 12px;
+	background: var(--gold);
+	color: var(--black);
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 16px;	
+	transition: var(--transition);
+    text-align: center;
+}
+
+.careers-btn:hover {
+	background: var(--navy);
+	color: var(--white);
+	border-color: var(--navy);
+}
+
+#successMessage {
+	margin-top: 20px;
+	padding: 15px;
+	text-align: center;
+	background: #eafaf1;
+	color: #2c7a2c;
+	border: 1px solid #27ae60;
+	border-radius: 8px;
+}
+
+.hidden {
+	display: none;
+}
+.upload-box {
+  border: 2px dashed #27ae60;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  background: #f9fffb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload-box:hover {
+  background: #eafaf1;
+}
+
+.upload-box p {
+  margin: 0;
+  color: #555;
+}
+
+.upload-box span {
+  color: #27ae60;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#fileName {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #2c3e50;
+  font-weight: bold;
+}
