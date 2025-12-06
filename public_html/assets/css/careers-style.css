@@ -1,4 +1,31 @@
+.section-careers{
+	background-color: var(--alice-blue);
+	padding-top: 10%;
+}
+
+	.header-bottom, .header.active .header-bottom {
+		position: absolute;
+		background: var(--navy);
+		bottom: auto;
+		top: 0;
+		width: 100%;
+		padding-block: 20px;
+		box-shadow: 0 10px 50px hsla(237, 71%, 52%, 0.2);
+		animation: slideDown 0.25s ease-in-out forwards;
+	}
+@keyframes slideDown {
+		0% {
+			position: absolute;
+			background: var(--navy);
+		}
+		100% {
+			position: absolute;
+			background: var(--navy);
+		}
+	}
+
 .careers-container {
+	
     max-width: 550px;
 	margin-inline: auto;
 	background: #fff;
@@ -15,7 +42,7 @@ h1 {
 p {
 	text-align: center;
 	margin-bottom: 20px;
-	color: var(--raisin-black-1);
+	/* color: var(--raisin-black-1); */
 }
 
 .form-group {
